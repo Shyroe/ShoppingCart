@@ -1,0 +1,144 @@
+
+@import '../../App.scss';
+
+.product-card {
+    width: 100%;
+    // border: 3px solid red;    
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-bottom: 4rem;    
+    
+
+    &__img-box {
+        // margin: 0;
+        // padding: 0;
+      
+        width: 100%;       
+        // border: 3px solid blue;
+        position: relative;       
+        // border: 3px solid purple;
+        overflow: hidden;
+        transition: all .5s;
+            
+
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+         
+        width: 100%;
+        
+        
+    }
+
+    &__icon {
+        font-size: 2.3rem;
+        margin-right: .6rem;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 60%;
+        right: -100%;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 60%;
+        padding: 3px 1rem;        
+        background-color: orange;
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+
+        @media only screen and (max-width: $bp-large) {
+            
+            font-size: 1.5rem;            
+            padding: 1rem 1rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            
+            font-size: 1.3rem;
+            padding: .8rem 1.2rem;            
+           
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            
+            // font-size: 2.5rem;
+            padding: 1.3rem 1.5rem;
+          }
+       
+        @media only screen and (max-width: $bp-smallest) {
+          top: 70%;
+          width: 40%;
+          font-size: 2.5rem;
+          padding: 1.5rem 1.5rem;
+        }
+
+
+        // @media only screen and (max-width: $bp-smallest) {
+        // @media only screen and (max-width: $bp-smallest) {
+        //     top: 80%;
+        //     width: 40%;
+        //     font-size: 2rem;
+        // }
+
+        &:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    //Exibir add cart
+    &__img-box:hover &__caption {
+        // display: block;
+        // transform: scaleX(1);
+        right: 0;
+    }
+
+    &__name {
+        font-size: 2.6rem;
+        font-weight: bold;
+        margin: 2rem 0;
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        color: orange;
+    }
+}
+
+//Buy and Buyed product
+.buy {
+    display: block;
+    // display: none;
+
+}
+
+.buyed {
+    display: none;
+    // display: block;
+}
+
+.product-card__caption:hover .buy {
+    display: none;
+}
+
+.product-card__caption:hover .buyed {
+    display: block;
+}
+
+// #cart:target .product-card__caption .buyed {
+//     display: block;
+// }
+
+// #cart:target .product-card__caption .buy {
+//     display: none;
+// }

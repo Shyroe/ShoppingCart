@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+.navbar {
+    // width: 100%;
+    display: flex;
+    // border: 3px solid purple;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem 1.5rem;         
+    }
+
+    &__cart {         
+            width: 3rem;
+            height: 100%;
+            position: relative; 
+            cursor: pointer;      
+    }
+
+    
+
+    
+}
+
+
+
+.cart-plus, .bars {
+    font-size: 30px;
+}
+
+.quantity {
+    position: absolute;
+    top: -35%;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: white;
+}
